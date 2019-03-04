@@ -1,0 +1,23 @@
+module.exports={
+	entry:__dirname+'/src/main.js',
+	output:{
+		path:__dirname+'/public',
+		filename:'bundle.js',
+	},
+	mode:'none',
+	devServer:{
+		contentBase:'public',
+		historyApiFallback:true,
+		inline:true,
+	},
+	devtool:'eval-source-map',
+	module:{
+		rules:[{
+			test:/(.jsx)|(.js)/,
+			exclude:/node_modules/,
+			use:{
+				loader:'babel-loader'
+			}
+		}]
+	}
+}
