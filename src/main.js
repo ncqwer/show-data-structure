@@ -7,7 +7,7 @@ import * as list_actions from './actions/list-actions.js'
 import ListApp from './containers/wrapped-list.js'
 import list_reducer from './reducers/list-reducers.js'
 
-
+console.log(`pathname:${location.pathname}`);
 const store = createStore(list_reducer);
 
 console.log(store.getState());
