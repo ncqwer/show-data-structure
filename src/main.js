@@ -7,13 +7,12 @@ import * as d3 from 'd3'
 
 import * as actions from './actions/list-actions.js'
 import ListApp from './components/list-app.js'
-import reducer from './reducers/list-reducers.js'
+import list_reducer from './reducers/list-reducers.js'
 import * as treeActions from './actions/tree-actions.js'
 import TreeApp from './components/tree-app.js'
 import treeReducer from './reducers/tree-reducers.js'
-
-
-const store = createStore(reducer);
+console.log(`pathname:${location.pathname}`);
+const store = createStore(list_reducer);
 
 console.log(store.getState());
 store.dispatch(actions.createUnti(1));
